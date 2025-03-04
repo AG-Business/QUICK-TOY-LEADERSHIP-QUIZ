@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)file:///C:/Users/Angeline%20Gillings/Downloads/simplified-toybox-leadership-quiz.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Toy Leadership Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-top: 25px;
+        }
+        
+        .intro {
+            background-color: #e8f4fc;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .question {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+        
+        .question h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .option {
+            display: flex;
+            align-items: flex-start;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+        
+        .option:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .option input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 25px auto;
+            width: 200px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .results {
+            display: none;
+        }
+        
+        .profile {
+            background-color: white;
+            padding: 18px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .profile h3 {
+            color: #3498db;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        
+        .type-icon {
+            font-size: 36px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .next-steps {
+            background-color: #d5f5e3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>QUICK TOY LEADERSHIP QUIZ</h1>
+        <p>Discover what your favorite childhood toys reveal about your leadership style</p>
+    </header>
+
+    <div class="intro">
+        <p>This 2-minute quiz reveals how childhood play shapes your leadership approach. Just 6 quick questions!</p>
+    </div>
+
+    <div id="quiz-container">
+        <div class="question" id="q1">
+            <h3>1. When tackling a challenge, you prefer to:</h3>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q1" value="A">
+                    <span>Build a solid foundation and work methodically</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="B">
+                    <span>Assemble a diverse team with complementary skills</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="C">
+                    <span>Analyze patterns and find hidden connections</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q1" value="D">
+                    <span>Get creative and reshape your approach as you go</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="question" id="q2">
+            <h3>2. Your friends would describe you as:</h3>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q2" value="A">
+                    <span>Reliable and thorough</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="B">
+                    <span>Collaborative and good with people</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="C">
+                    <span>Analytical and insightful</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q2" value="D">
+                    <span>Creative and adaptable</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="question" id="q3">
+            <h3>3. In group projects, you typically:</h3>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q3" value="A">
+                    <span>Create structure and ensure quality</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="B">
+                    <span>Help everyone understand their roles</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="C">
+                    <span>Solve complex problems with creative solutions</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q3" value="D">
+                    <span>Bring fresh ideas that transform the project</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="question" id="q4">
+            <h3>4. You feel most satisfied when:</h3>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q4" value="A">
+                    <span>Building something tangible and lasting</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="B">
+                    <span>Bringing out the best in a diverse team</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="C">
+                    <span>Discovering the solution to a tricky problem</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q4" value="D">
+                    <span>Transforming something ordinary into something special</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="question" id="q5">
+            <h3>5. When plans change suddenly, you:</h3>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q5" value="A">
+                    <span>Return to fundamentals and rebuild methodically</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="B">
+                    <span>Check in with everyone to maintain team cohesion</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="C">
+                    <span>Look for patterns that help explain the disruption</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q5" value="D">
+                    <span>Quickly adapt and find creative alternatives</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="question" id="q6">
+            <h3>6. As a leader, your greatest strength is:</h3>
+            <div class="options">
+                <label class="option">
+                    <input type="radio" name="q6" value="A">
+                    <span>Creating reliable systems that stand the test of time</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="B">
+                    <span>Bringing out unique potential in every team member</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="C">
+                    <span>Seeing connections and solutions others miss</span>
+                </label>
+                <label class="option">
+                    <input type="radio" name="q6" value="D">
+                    <span>Transforming limitations into creative possibilities</span>
+                </label>
+            </div>
+        </div>
+
+        <button id="submit-btn">See My Results</button>
+    </div>
+
+    <div id="results" class="results">
+        <h2>Your Toy Leadership Style</h2>
+        
+        <div id="primary-profile" class="profile">
+            <h3 id="primary-title">Your Leadership Style</h3>
+            <div class="type-icon" id="primary-icon">🧩</div>
+            <div id="primary-content"></div>
+        </div>
+        
+        <div class="next-steps">
+            <h3>Power Up Your Leadership</h3>
+            <p><strong>Quick Tip:</strong> <span id="quick-tip">Loading...</span></p>
+            <p>Scan the QR code at our booth for your complete leadership profile and personalized development plan!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Toybox Leadership</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const submitBtn = document.getElementById('submit-btn');
+            const quizContainer = document.getElementById('quiz-container');
+            const resultsSection = document.getElementById('results');
+            
+            const profileContent = {
+                A: {
+                    title: "Building Blocks Leader",
+                    icon: "🧱",
+                    content: `<p><strong>Just like building blocks were your foundation for creating in childhood, you build strong foundations in your leadership approach.</strong></p>
+                    <p>You excel at organizing, creating structure, and methodically tackling complex challenges. Your reliable approach helps groups achieve consistent results.</p>
+                    <p><strong>In college:</strong> You're the one organizing effective study groups and breaking big projects into manageable pieces.</p>
+                    <p><strong>In your career:</strong> You'll shine when building systems, maintaining quality, and providing stability during change.</p>`,
+                    tip: "Next time you face a challenge, try an improvisational approach before falling back on your usual structured methods."
+                },
+                B: {
+                    title: "Action Figure Leader",
+                    icon: "🦸",
+                    content: `<p><strong>Just as you once brought different action figures together for adventures, you now bring together people with diverse strengths.</strong></p>
+                    <p>You naturally recognize unique abilities in others and excel at team building, understanding different roles, and inspiring collaboration.</p>
+                    <p><strong>In college:</strong> You thrive at assembling project teams and helping everyone find their place in organizations.</p>
+                    <p><strong>In your career:</strong> You'll excel in team leadership and roles requiring multiple stakeholder perspectives.</p>`,
+                    tip: "Challenge yourself to complete a project entirely independently to develop skills beyond your natural team orientation."
+                },
+                C: {
+                    title: "Puzzle Leader",
+                    icon: "🧩",
+                    content: `<p><strong>The patience and insight you developed solving puzzles now helps you solve complex leadership challenges.</strong></p>
+                    <p>You see connections others miss and excel at identifying patterns. Your analytical mind finds solutions in unexpected places.</p>
+                    <p><strong>In college:</strong> You shine in research projects and interdisciplinary studies that require complex analysis.</p>
+                    <p><strong>In your career:</strong> You'll be valued for strategic thinking and finding innovative connections between ideas.</p>`,
+                    tip: "Practice explaining your insights using simple metaphors to help others who don't naturally see the patterns you do."
+                },
+                D: {
+                    title: "Creative Transformer Leader",
+                    icon: "🏺",
+                    content: `<p><strong>Just as you once shaped clay into endless possibilities, you now transform challenges into opportunities.</strong></p>
+                    <p>You're incredibly adaptable and not limited by conventional thinking. Your creative energy brings fresh perspectives to every situation.</p>
+                    <p><strong>In college:</strong> You excel in creative projects and situations requiring quick adaptation to change.</p>
+                    <p><strong>In your career:</strong> You'll stand out in innovation roles and fields requiring constant reinvention.</p>`,
+                    tip: "Create some consistent elements in your approach to provide stability for team members who might find your constant reinvention challenging."
+                }
+            };
+            
+            submitBtn.addEventListener('click', function() {
+                // Calculate scores
+                const scores = { A: 0, B: 0, C: 0, D: 0 };
+                
+                // Check all questions are answered
+                let allAnswered = true;
+                for (let i = 1; i <= 6; i++) {
+                    const answered = document.querySelector(`input[name="q${i}"]:checked`);
+                    if (!answered) {
+                        allAnswered = false;
+                        alert(`Please answer question ${i} before submitting.`);
+                        break;
+                    } else {
+                        scores[answered.value]++;
+                    }
+                }
+                
+                if (allAnswered) {
+                    // Determine primary style
+                    const sortedScores = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+                    const primaryStyle = sortedScores[0][0];
+                    
+                    // Fill in profile content
+                    document.getElementById('primary-title').textContent = profileContent[primaryStyle].title;
+                    document.getElementById('primary-icon').textContent = profileContent[primaryStyle].icon;
+                    document.getElementById('primary-content').innerHTML = profileContent[primaryStyle].content;
+                    document.getElementById('quick-tip').textContent = profileContent[primaryStyle].tip;
+                    
+                    // Show results
+                    quizContainer.style.display = 'none';
+                    resultsSection.style.display = 'block';
+                    
+                    // Scroll to top of results
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
